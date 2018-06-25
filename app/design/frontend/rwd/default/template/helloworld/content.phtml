@@ -1,0 +1,14 @@
+<?php
+/** @var Quan_Helloworld_Block_Job $this */
+echo get_class($this) . '</br>';
+echo 'Quan is ' . $this->getJob() . '</br>';
+echo 'Tuoi cua a ' . $this->getAge() . '</br>';
+echo 'Luong cua a ' . $this->getSalary() . '</br>';
+var_dump($this->getPerson(1)->getData());
+/** @var Quan_Helloworld_Model_Mysql4_Training_Collection $collection */
+$collection = $this->getCollection();
+if ($collection->getSize()) {
+    foreach($collection as $person) {
+        var_dump($person->getData());
+    }
+}
